@@ -1,28 +1,52 @@
 spring:
   application:
     name: engine
+  config:
+    import: optional:file:.env[.properties]
   ai:
     google:
       genai:
-        api-key: AIzaSyBBCBU7-xyK9tCCZ6POt18saJ0DsFNaG_w
+        api-key: ${GOOGLE_GENAI_API_KEY}
         chat:
           options:
-            model: gemini-2.5-flash
-            temperature: 0.2
+            model: gemini-2.5-flash-lite
+            temperature: 0.3
 
 servicenow:
   base-url: https://dev290594.service-now.com
-  username: admin
-  password: t0JR^RAq1r%o
+  username: ${SERVICENOW_USERNAME}
+  password: ${SERVICENOW_PASSWORD}
   table: incident
-  max-limit: 10
-
-app:
-  allowed-fields:
+  max-limit: 100
+  response-fields:
+    - sys_id
     - number
-    - priority
+    - short_description
     - state
+    - priority
     - assignment_group
+    - assigned_to
     - category
     - impact
     - urgency
+    - opened_at
+    - resolved_at
+    - closed_at
+    - caller_id
+
+app:
+  allowed-fields:
+    - sys_id
+    - number
+    - short_description
+    - priority
+    - state
+    - assignment_group
+    - assigned_to
+    - category
+    - impact
+    - urgency
+    - opened_at
+    - resolved_at
+    - closed_at
+    - caller_id

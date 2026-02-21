@@ -20,11 +20,16 @@ public class ServiceNowClient{
     public String fetch(String query){
         log.debug("[ServiceNowClient] Fetching data with query: {}", query);
 
+        String responseFields = properties.getResponseFields() == null || properties.getResponseFields().isEmpty()
+                ? ""
+                : "&sysparm_fields=" + String.join(",", properties.getResponseFields());
+
         String uri = properties.getBaseUrl()+
                 "/api/now/table/" + properties.getTable()+
                 "?sysparm_query="+query+
                 "&sysparm_display_value=true" +
-                "&sysparam_limit="+properties.getMaxLimit();
+                "&sysparam_limit="+properties.getMaxLimit()+
+                responseFields;
         log.debug("[ServiceNowClient] Calling ServiceNow API endpoint");
         return webClientBuilder.build()
                 .get()
