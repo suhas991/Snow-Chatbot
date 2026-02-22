@@ -2325,3 +2325,93 @@ Please retry in 52.36097938s.
 2026-02-21 21:39:24 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 500
 2026-02-21 21:39:59 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
 2026-02-21 21:39:59 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-02-21 21:40:05 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-02-21 21:40:05 [main] INFO  com.snow.engine.EngineApplication - Starting EngineApplication using Java 21.0.8 with PID 34092 (C:\Users\suhas\OneDrive\Desktop\engine\target\classes started by suhas in C:\Users\suhas\OneDrive\Desktop\engine)
+2026-02-21 21:40:05 [main] DEBUG com.snow.engine.EngineApplication - Running with Spring Boot v3.5.11, Spring v6.2.16
+2026-02-21 21:40:05 [main] INFO  com.snow.engine.EngineApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-21 21:40:06 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-21 21:40:06 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-21 21:40:06 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-21 21:40:06 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.52]
+2026-02-21 21:40:06 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-21 21:40:06 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1117 ms
+2026-02-21 21:40:07 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+2026-02-21 21:40:07 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-02-21 21:40:07 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-21 21:40:07 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-21 21:40:07 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-21 21:40:07 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-21 21:40:07 [main] INFO  com.snow.engine.EngineApplication - Started EngineApplication in 3.014 seconds (process running for 3.664)
+2026-02-21 21:40:11 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-21 21:40:11 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-21 21:40:11 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-02-21 21:40:11 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-02-21 21:40:11 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-02-21 21:40:11 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@19b44a28
+2026-02-21 21:40:11 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@492e5f96
+2026-02-21 21:40:11 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-02-21 21:40:11 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-02-21 21:40:11 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/snow/chat", parameters={}
+2026-02-21 21:40:11 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.snow.engine.controller.ChatController#chat(ChatRequest)
+2026-02-21 21:40:11 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [ChatRequest(message=Waats teh total incident tickets available and analyse ticekt in each state)]
+2026-02-21 21:40:11 [http-nio-8080-exec-2] INFO  c.s.engine.controller.ChatController - [ChatController] Received chat request: Waats teh total incident tickets available and analyse ticekt in each state
+2026-02-21 21:40:11 [http-nio-8080-exec-2] INFO  com.snow.engine.service.ChatService - [ChatService] Processing message: Waats teh total incident tickets available and analyse ticekt in each state
+2026-02-21 21:40:11 [http-nio-8080-exec-2] DEBUG com.snow.engine.service.ChatService - [ChatService] Calling AIService.extractIntent()
+2026-02-21 21:40:11 [http-nio-8080-exec-2] DEBUG com.snow.engine.service.AIService - [AIService] Extracting intent from user message: Waats teh total incident tickets available and analyse ticekt in each state
+2026-02-21 21:40:11 [http-nio-8080-exec-2] DEBUG com.snow.engine.service.AIService - [AIService] Calling ChatClient.prompt() to extract intent
+2026-02-21 21:40:13 [http-nio-8080-exec-2] DEBUG com.snow.engine.service.ChatService - [ChatService] Extraction response intent: search_incidents
+2026-02-21 21:40:13 [http-nio-8080-exec-2] DEBUG com.snow.engine.service.ChatService - [ChatService] Extracted filters: {state=1,2,3,4,5,6,7}
+2026-02-21 21:40:13 [http-nio-8080-exec-2] DEBUG com.snow.engine.service.ChatService - [ChatService] Building query from extraction filters
+2026-02-21 21:40:13 [http-nio-8080-exec-2] DEBUG c.snow.engine.utility.QueryBuilder - [QueryBuilder] Building equals query: state = 1,2,3,4,5,6,7
+2026-02-21 21:40:13 [http-nio-8080-exec-2] DEBUG c.snow.engine.utility.QueryBuilder - [QueryBuilder] Built query: state=1234567
+2026-02-21 21:40:13 [http-nio-8080-exec-2] DEBUG com.snow.engine.service.ChatService - [ChatService] Built query: state=1234567
+2026-02-21 21:40:13 [http-nio-8080-exec-2] DEBUG com.snow.engine.service.ChatService - [ChatService] Fetching data from ServiceNow
+2026-02-21 21:40:13 [http-nio-8080-exec-2] DEBUG c.s.engine.service.ServiceNowClient - [ServiceNowClient] Fetching data with query: state=1234567
+2026-02-21 21:40:13 [http-nio-8080-exec-2] DEBUG c.s.engine.service.ServiceNowClient - [ServiceNowClient] Calling ServiceNow API endpoint
+2026-02-21 21:40:13 [http-nio-8080-exec-2] DEBUG o.s.w.r.f.client.ExchangeFunctions - [5e685074] HTTP GET https://dev290594.service-now.com/api/now/table/incident?sysparm_query=state%3D1234567&sysparm_display_value=true&sysparam_limit=100&sysparm_fields=sys_id,number,short_description,state,priority,assignment_group,assigned_to,category,impact,urgency,opened_at,resolved_at,closed_at,caller_id
+2026-02-21 21:40:15 [reactor-http-nio-2] DEBUG o.s.w.r.f.client.ExchangeFunctions - [5e685074] [88260c78-1] Response 200 OK
+2026-02-21 21:40:15 [reactor-http-nio-2] DEBUG org.springframework.web.HttpLogging - [5e685074] [88260c78-1] Decoded "{"result":[]}"
+2026-02-21 21:40:15 [reactor-http-nio-2] DEBUG c.s.engine.service.ServiceNowClient - [ServiceNowClient] Received response from ServiceNow
+2026-02-21 21:40:15 [http-nio-8080-exec-2] DEBUG com.snow.engine.service.ChatService - [ChatService] Received response from ServiceNow with length: 13
+2026-02-21 21:40:15 [http-nio-8080-exec-2] DEBUG com.snow.engine.service.ChatService - [ChatService] Summarizing result
+2026-02-21 21:40:15 [http-nio-8080-exec-2] DEBUG com.snow.engine.service.AIService - [AIService] Summarizing response for user message with snowResponse length: 13
+2026-02-21 21:40:15 [http-nio-8080-exec-2] DEBUG com.snow.engine.service.AIService - [AIService] Calling ChatClient.prompt() to summarize
+2026-02-21 21:40:16 [http-nio-8080-exec-2] INFO  com.snow.engine.service.ChatService - [ChatService] Process completed successfully
+2026-02-21 21:40:16 [http-nio-8080-exec-2] DEBUG com.snow.engine.service.ChatService - [ChatService] Final result length: 40
+2026-02-21 21:40:16 [http-nio-8080-exec-2] INFO  c.s.engine.controller.ChatController - [ChatController] Chat request processed successfully
+2026-02-21 21:40:16 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-02-21 21:40:16 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ChatResponse(answer=There are no incident tickets available.)]
+2026-02-21 21:40:16 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-02-21 23:27:53 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/snow/chat", parameters={}
+2026-02-21 23:27:53 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.snow.engine.controller.ChatController#chat(ChatRequest)
+2026-02-21 23:27:53 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [ChatRequest(message=Waats teh total incident tickets available and analyse ticekt in each state)]
+2026-02-21 23:27:53 [http-nio-8080-exec-5] INFO  c.s.engine.controller.ChatController - [ChatController] Received chat request: Waats teh total incident tickets available and analyse ticekt in each state
+2026-02-21 23:27:53 [http-nio-8080-exec-5] INFO  com.snow.engine.service.ChatService - [ChatService] Processing message: Waats teh total incident tickets available and analyse ticekt in each state
+2026-02-21 23:27:53 [http-nio-8080-exec-5] DEBUG com.snow.engine.service.ChatService - [ChatService] Calling AIService.extractIntent()
+2026-02-21 23:27:53 [http-nio-8080-exec-5] DEBUG com.snow.engine.service.AIService - [AIService] Extracting intent from user message: Waats teh total incident tickets available and analyse ticekt in each state
+2026-02-21 23:27:53 [http-nio-8080-exec-5] DEBUG com.snow.engine.service.AIService - [AIService] Calling ChatClient.prompt() to extract intent
+2026-02-21 23:27:55 [http-nio-8080-exec-5] DEBUG com.snow.engine.service.ChatService - [ChatService] Extraction response intent: search_incidents
+2026-02-21 23:27:55 [http-nio-8080-exec-5] DEBUG com.snow.engine.service.ChatService - [ChatService] Extracted filters: {state=1,2,3,4,5,6,7}
+2026-02-21 23:27:55 [http-nio-8080-exec-5] DEBUG com.snow.engine.service.ChatService - [ChatService] Building query from extraction filters
+2026-02-21 23:27:55 [http-nio-8080-exec-5] DEBUG c.snow.engine.utility.QueryBuilder - [QueryBuilder] Building equals query: state = 1,2,3,4,5,6,7
+2026-02-21 23:27:55 [http-nio-8080-exec-5] DEBUG c.snow.engine.utility.QueryBuilder - [QueryBuilder] Built query: state=1234567
+2026-02-21 23:27:55 [http-nio-8080-exec-5] DEBUG com.snow.engine.service.ChatService - [ChatService] Built query: state=1234567
+2026-02-21 23:27:55 [http-nio-8080-exec-5] DEBUG com.snow.engine.service.ChatService - [ChatService] Fetching data from ServiceNow
+2026-02-21 23:27:55 [http-nio-8080-exec-5] DEBUG c.s.engine.service.ServiceNowClient - [ServiceNowClient] Fetching data with query: state=1234567
+2026-02-21 23:27:55 [http-nio-8080-exec-5] DEBUG c.s.engine.service.ServiceNowClient - [ServiceNowClient] Calling ServiceNow API endpoint
+2026-02-21 23:27:55 [http-nio-8080-exec-5] DEBUG o.s.w.r.f.client.ExchangeFunctions - [4e2c838d] HTTP GET https://dev290594.service-now.com/api/now/table/incident?sysparm_query=state%3D1234567&sysparm_display_value=true&sysparam_limit=100&sysparm_fields=sys_id,number,short_description,state,priority,assignment_group,assigned_to,category,impact,urgency,opened_at,resolved_at,closed_at,caller_id
+2026-02-21 23:27:59 [reactor-http-nio-3] DEBUG o.s.w.r.f.client.ExchangeFunctions - [4e2c838d] [4fd3efa1-1] Response 200 OK
+2026-02-21 23:27:59 [reactor-http-nio-3] DEBUG org.springframework.web.HttpLogging - [4e2c838d] [4fd3efa1-1] Decoded "{"result":[]}"
+2026-02-21 23:27:59 [reactor-http-nio-3] DEBUG c.s.engine.service.ServiceNowClient - [ServiceNowClient] Received response from ServiceNow
+2026-02-21 23:27:59 [http-nio-8080-exec-5] DEBUG com.snow.engine.service.ChatService - [ChatService] Received response from ServiceNow with length: 13
+2026-02-21 23:27:59 [http-nio-8080-exec-5] DEBUG com.snow.engine.service.ChatService - [ChatService] Summarizing result
+2026-02-21 23:27:59 [http-nio-8080-exec-5] DEBUG com.snow.engine.service.AIService - [AIService] Summarizing response for user message with snowResponse length: 13
+2026-02-21 23:27:59 [http-nio-8080-exec-5] DEBUG com.snow.engine.service.AIService - [AIService] Calling ChatClient.prompt() to summarize
+2026-02-21 23:28:00 [http-nio-8080-exec-5] INFO  com.snow.engine.service.ChatService - [ChatService] Process completed successfully
+2026-02-21 23:28:00 [http-nio-8080-exec-5] DEBUG com.snow.engine.service.ChatService - [ChatService] Final result length: 54
+2026-02-21 23:28:00 [http-nio-8080-exec-5] INFO  c.s.engine.controller.ChatController - [ChatController] Chat request processed successfully
+2026-02-21 23:28:00 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-02-21 23:28:00 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ChatResponse(answer=There are no incident tickets available in the system.)]
+2026-02-21 23:28:00 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-02-21 23:37:40 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-21 23:37:40 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete

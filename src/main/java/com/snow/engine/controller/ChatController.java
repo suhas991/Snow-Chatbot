@@ -1,17 +1,18 @@
 package com.snow.engine.controller;
 
+import com.snow.engine.entity.Incident;
 import com.snow.engine.model.ChatRequest;
 import com.snow.engine.model.ChatResponse;
+import com.snow.engine.model.IncidentWebhookDto;
+import com.snow.engine.repository.IncidentRepository;
 import com.snow.engine.service.ChatService;
+import com.snow.engine.service.sync.IncidentSyncService;
 import lombok.RequiredArgsConstructor;
 import lombok.Value;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -36,4 +37,15 @@ public class ChatController {
             throw e;
         }
     }
+
+    @Autowired
+    private IncidentSyncService incidentSyncService;
+    @PostMapping("/listener")
+    public ResponseEntity<String> webhookListener(@RequestBody IncidentWebhookDto dto){
+
+        incidentSyncService.insertIncident(dto);
+
+        return ResponseEntity.ok("Data saved successfully.");
+    }
+
 }

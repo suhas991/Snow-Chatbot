@@ -1,16 +1,46 @@
 spring:
   application:
     name: engine
+
   config:
     import: optional:file:.env[.properties]
+
   ai:
     google:
       genai:
+        project-id: bkmrk-app
         api-key: ${GOOGLE_GENAI_API_KEY}
         chat:
           options:
             model: gemini-2.5-flash-lite
             temperature: 0.3
+        embedding:
+          project-id: bkmrk-app
+          api-key: ${GOOGLE_GENAI_API_KEY}
+          text:
+            options:
+              model: gemini-embedding-001
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/engine_db
+    username: engine
+    password: engine123
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+logging:
+  level:
+    root: INFO
+    com.snow.engine: DEBUG
+    org.springframework.web: INFO
+    org.springframework.web.reactive.function.client: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n"
 
 servicenow:
   base-url: https://dev290594.service-now.com
